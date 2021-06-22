@@ -111,7 +111,7 @@ export default {
               preventDefault: false, // set to true if you do not want the default behaviour
             },
             (result) => {
-              this.maps[refName].currentMarkerId = result.marker.id;
+              this.maps[refName].currentMarkerId = result.marker.markerId;
               alert(JSON.stringify(result));
             }
           );
