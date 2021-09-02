@@ -167,8 +167,10 @@ export default {
           for (i = 0; i < 500; i++) {
             CapacitorGoogleMaps.addMarker({
               mapId: result.googleMap.mapId,
-              latitude: -this.getRandomArbitrary(33, 34),
-              longitude: this.getRandomArbitrary(151, 152),
+              position: {
+                latitude: -this.getRandomArbitrary(33, 34),
+                longitude: this.getRandomArbitrary(151, 152),
+              },
               title: 'Some title',
               snippet: 'Some snippet ',
               metadata: {
