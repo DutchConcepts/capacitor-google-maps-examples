@@ -113,7 +113,7 @@ export default {
 
       // initialize map
       await CapacitorGoogleMaps.initialize({
-        key: null,
+        key: 'your_api_key',
         devicePixelRatio: window.devicePixelRatio,
       });
 
