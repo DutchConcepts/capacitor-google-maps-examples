@@ -240,6 +240,41 @@ export default {
             }
           );
 
+          CapacitorGoogleMaps.didBeginDraggingMarker(
+            {
+              mapId: result.googleMap.mapId,
+            },
+            (res) => {
+              console.log(
+                '[capacitor - gmap] didBeginDraggingMarker: ' +
+                  JSON.stringify(res)
+              );
+            }
+          );
+
+          CapacitorGoogleMaps.didDragMarker(
+            {
+              mapId: result.googleMap.mapId,
+            },
+            (res) => {
+              console.log(
+                '[capacitor - gmap] didDragMarker: ' + JSON.stringify(res)
+              );
+            }
+          );
+
+          CapacitorGoogleMaps.didEndDraggingMarker(
+            {
+              mapId: result.googleMap.mapId,
+            },
+            (res) => {
+              console.log(
+                '[capacitor - gmap] didEndDraggingMarker: ' +
+                  JSON.stringify(res)
+              );
+            }
+          );
+
           CapacitorGoogleMaps.didTapMyLocationButton(
             {
               mapId: result.googleMap.mapId,
@@ -256,6 +291,49 @@ export default {
             },
             (result) => {
               alert('didTapMyLocationDot: ' + JSON.stringify(result));
+            }
+          );
+
+          CapacitorGoogleMaps.didTapPoi(
+            {
+              mapId: result.googleMap.mapId,
+            },
+            (result) => {
+              alert('didTapPoi: ' + JSON.stringify(result));
+            }
+          );
+
+          CapacitorGoogleMaps.didBeginMovingCamera(
+            {
+              mapId: result.googleMap.mapId,
+            },
+            (res) => {
+              console.log(
+                '[capacitor - gmap] didBeginMovingCamera: ' +
+                  JSON.stringify(res)
+              );
+            }
+          );
+
+          CapacitorGoogleMaps.didMoveCamera(
+            {
+              mapId: result.googleMap.mapId,
+            },
+            (res) => {
+              console.log(
+                '[capacitor - gmap] didMoveCamera: ' + JSON.stringify(res)
+              );
+            }
+          );
+
+          CapacitorGoogleMaps.didEndMovingCamera(
+            {
+              mapId: result.googleMap.mapId,
+            },
+            (res) => {
+              console.log(
+                '[capacitor - gmap] didEndMovingCamera: ' + JSON.stringify(res)
+              );
             }
           );
         }
