@@ -1,5 +1,5 @@
 <template>
-  <div id="body">
+  <div id="body" style="height: 90vh; overflow: auto">
     <div class="col">
       <div ref="first" style="background: red" @click="startMap('first')"></div>
 
@@ -365,9 +365,8 @@ div {
   color: #000;
 }
 
-.col {
-  display: flex;
-  flex-direction: column;
+.col > div {
+  height: 50vh;
 }
 
 .absolute-square {
