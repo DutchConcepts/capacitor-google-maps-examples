@@ -111,12 +111,6 @@ export default {
       // prevent race condition, where firing `startMap` quickly after one another, starts up multiple maps
       this.maps[refName] = {};
 
-      // initialize map
-      await CapacitorGoogleMaps.initialize({
-        key: 'your_api_key',
-        devicePixelRatio: window.devicePixelRatio,
-      });
-
       // remove background, so map can be seen
       element.style.background = '';
 
@@ -342,6 +336,14 @@ export default {
         this.maps[refName] = null;
       }
     },
+  },
+
+  async mounted() {
+    // initialize map
+    await CapacitorGoogleMaps.initialize({
+      key: 'your_api_key',
+      devicePixelRatio: window.devicePixelRatio,
+    });
   },
 };
 </script>
